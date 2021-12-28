@@ -64,6 +64,7 @@ PUBLIC_CHAINS = {
     42: "Kovan",
     77: "Sokol",
     100: "xDai",
+    80001: "Mumbai",
 }
 
 LOCAL_CHAINS = {
@@ -88,6 +89,7 @@ class EthereumClient:
     PARITY = 'Parity'
     ALT_PARITY = 'Parity-Ethereum'
     GANACHE = 'EthereumJS TestRPC'
+    MUMBAI = 'Mumbai'
 
     ETHEREUM_TESTER = 'EthereumTester'  # (PyEVM)
     CLEF = 'Clef'  # Signer-only
@@ -162,11 +164,16 @@ class EthereumClient:
         Parity  -> 'Parity-Ethereum/v2.5.1-beta-e0141f8-20190510/x86_64-linux-gnu/rustc1.34.1'
         Ganache -> 'EthereumJS TestRPC/v2.1.5/ethereum-js'
         PyEVM   -> 'EthereumTester/0.1.0b39/linux/python3.6.7'
+
+        For Mumbai we need to point to Geth as well:
+        Geth    -> 'bor/v0.2.13-beta2-c227a072/linux-amd64/go1.17.5'
+
         """
         clients = {
 
             # Geth
             cls.GETH: GethClient,
+            cls.MUMBAI: GethClient,
 
             # Parity
             cls.PARITY: ParityClient,
