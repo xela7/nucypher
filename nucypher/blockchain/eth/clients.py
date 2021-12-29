@@ -89,7 +89,7 @@ class EthereumClient:
     PARITY = 'Parity'
     ALT_PARITY = 'Parity-Ethereum'
     GANACHE = 'EthereumJS TestRPC'
-    MUMBAI = 'Mumbai'
+    MUMBAI = 'bor'
 
     ETHEREUM_TESTER = 'EthereumTester'  # (PyEVM)
     CLEF = 'Clef'  # Signer-only
